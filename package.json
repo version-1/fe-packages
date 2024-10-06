@@ -1,5 +1,5 @@
 {
-  "name": "fe-packages",
+  "name": "@version-1/fe-sk",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
