@@ -1,0 +1,52 @@
+{
+  "name": "@fe-sk/utils",
+  "version": "0.0.2",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./styles": {
+      "types": "./src/styles/index.ts",
+      "default": "./dist/styles/index.js"
+    },
+    "./strings": {
+      "types": "./src/strings/index.ts",
+      "default": "./dist/strings/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "tsup": {
+    "entry": [
+      "src/styles/index.ts",
+      "src/strings/index.ts"
+    ],
+    "minify": true,
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "dts": true,
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/node": "^22.7.4"
+  }
+}
