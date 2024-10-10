@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 import Button from "@fe-sk/ui/button";
 import { TextInput } from "@fe-sk/ui/input";

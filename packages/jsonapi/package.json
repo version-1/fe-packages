@@ -1,0 +1,52 @@
+{
+  "name": "@fe-sk/jsonapi",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./serializer": {
+      "types": "./src/serializer/index.ts",
+      "default": "./dist/serializer/index.js"
+    },
+    "./deserializer": {
+      "types": "./src/deserializer/index.ts",
+      "default": "./dist/deserializer/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "tsup": {
+    "entry": [
+      "src/serializer/index.ts",
+      "src/deserializer/index.ts"
+    ],
+    "minify": true,
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "dts": true,
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/node": "^22.7.4"
+  }
+}
